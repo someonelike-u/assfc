@@ -48,7 +48,7 @@ class FontLoader(object):
 
             for candidate in candidates:
                 if candidate.italic == font_info.italic and \
-                   ((font_info.bold == 1 and candidate.bold == True) or
+                   ((font_info.bold == 1 and (candidate.bold == True or candidate.weight > 500)) or
                    (font_info.bold == 0 and candidate.bold == False) or
                    candidate.weight == font_info.bold):
                     best_candidate = candidate
